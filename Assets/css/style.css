@@ -9,9 +9,9 @@
   padding: 0px;
 }
 
-/* main body/slides */
+/* main body */
 body {
-  width: 100vw;
+  width: 99.9vw;
   height: 100vh;
   background-color: var(--theme-color);
 }
@@ -22,17 +22,26 @@ body {
 
 .wrapper {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   flex-direction: column;
 }
-
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+section {
+  scroll-snap-align: start;
+}
 .slide {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   justify-content: center;
   align-items: center;
+}
+h1 {
+  font-size: 300%;
 }
 
 .home {
@@ -49,18 +58,94 @@ body {
 }
 
 /* Navigation bar */
+header {
+  background-color: #fffcf7;
+  padding: 28px 10%;
+}
+nav {
+  height: 100%;
+}
 ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
 }
 li {
-  color: black;
+  display: flex;
+  justify-content: center;
+  color: white;
+  min-width: 30%;
+  max-width: 30%;
 }
 a {
-  text-decoration: none;
-}
-header {
+  flex: 1;
   background-color: #fffcf7;
-  padding: 28px 10%;
+  color: rgb(0, 119, 139);
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+  font-size: 110%;
+}
+
+a:hover,
+a:focus {
+  background-color: #738290;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px 1px #596881;
+}
+
+/* resize media query */
+@media only screen and (max-width: 450px) {
+  header {
+    display: flex;
+    width: 100vw;
+    padding: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  ul {
+    display: block;
+    width: 100vw;
+  }
+  li {
+    margin: auto;
+    min-width: 50%;
+    max-width: 50%;
+  }
+  a:focus {
+    box-shadow: none;
+  }
+}
+
+/* scrollbar customize */
+/* width */
+::-webkit-scrollbar {
+  background: #f1f1f1;
+  width: 8px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, #a1b5d8 0%, #c2d8b9 50%, #e4f0d0 100%);
+
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(133, 133, 133);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(59, 59, 59);
+  border-radius: 10px;
 }
