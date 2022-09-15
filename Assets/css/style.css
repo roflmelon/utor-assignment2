@@ -20,6 +20,7 @@ a:hover,
 a:focus {
   background-color: #738290;
   color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .outer-wrapper {
@@ -48,6 +49,37 @@ section {
   flex-direction: column;
 }
 
+/* ---------------------------------------------Navigation bar */
+header {
+  background-color: #fffcf7;
+  padding: 28px 10%;
+}
+nav {
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  display: flex;
+  justify-content: center;
+  color: white;
+  min-width: 30%;
+  max-width: 30%;
+}
+header a {
+  flex: 1;
+  background-color: #fffcf7;
+  color: rgb(0, 119, 139);
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+  font-size: 110%;
+}
 /* ------------------------------home screen/main avatar page */
 #home img {
   display: flex;
@@ -155,49 +187,29 @@ section {
 .contact {
   background-color: #a1b5d8;
 }
-
-/* ---------------------------------------------Navigation bar */
-header {
-  background-color: #fffcf7;
-  padding: 28px 10%;
-}
-nav {
-  height: 100%;
-}
-ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-}
-li {
+.contact h1 {
   display: flex;
   justify-content: center;
-  color: white;
-  min-width: 30%;
-  max-width: 30%;
+  align-items: center;
 }
-header a {
-  flex: 1;
-  background-color: #fffcf7;
-  color: rgb(0, 119, 139);
-  border-radius: 5px;
-  padding: 0.5rem;
+.contact-container {
+  display: flex;
+  height: 50%;
+}
+.contact-container img {
+  height: 100%;
+}
+.contact-container a {
+  height: 10%;
+  margin: 20px;
+}
+/* -------------------------------------footer */
+
+footer {
+  color: rgba(255, 255, 255);
   text-align: center;
-  text-decoration: none;
-  transition: all 0.5s ease-out;
-  font-size: 110%;
 }
 /* ---------------------------------animation keyframes  */
-@keyframes hover-blur {
-  0% {
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
-  }
-  100% {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-  }
-}
 
 /* ------------------------------resize media query for header */
 @media only screen and (max-width: 500px) {
