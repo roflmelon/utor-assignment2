@@ -24,6 +24,8 @@ Hao Zhou and friends
 
 ### Wireframe screenshot:
 
+![me](./Assets/images/wireframe.jpg)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

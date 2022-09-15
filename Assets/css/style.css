@@ -99,7 +99,7 @@ header a {
 #about > img {
   display: flex;
   border-radius: 50vw;
-  width: fit-content;
+  width: auto;
   height: 30vh;
 }
 .skill-images {
